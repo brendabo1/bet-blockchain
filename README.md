@@ -49,6 +49,18 @@ No funcionamento, desenvolvedores escrevem contratos usando Solidity e os implan
 <p align="center">
   <img src="https://github.com/ZeDaManga01/Repositorio/blob/main/Untitled.jpg" />
 </p>
+
+<div align="center">
+  <figure>  
+    <img src="images/Sockets-Rede.png" width="600px">
+    <figcaption>
+      <p align="center"> 
+
+**Figura 1** - poe a legenda da imagem aq
+    </figcaption>
+  </figure>
+</div>
+
 No contexto de apostas, contratos inteligentes podem ser usados para criar eventos, registrar apostas e distribuir prêmios automaticamente após o resultado. Isso inclui definir odds, registrar valores apostados e distribuir os prêmios aos vencedores de forma automatizada.
 ________________________________________
 
