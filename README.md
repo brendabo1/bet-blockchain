@@ -137,12 +137,6 @@ Distribuição Automática de Prêmios: Após o término de um evento esportivo,
 
 Funcionalidade de Saque e Depósito: Na aplicação, o usuário pode realizar depósitos e saques diretamente usando sua carteira Metamask. Para o depósito, o usuário transfere criptomoeda (como Ether) para o endereço indicado, e o saldo é atualizado automaticamente após a confirmação na blockchain. Já no saque, o usuário escolhe o valor a ser retirado e a transação é enviada para seu endereço de carteira. Tanto depósitos quanto saques são validados por contratos inteligentes, garantindo segurança, transparência e atualização imediata do saldo na plataforma.
 
-### Limitações Identificadas
-<!--Limitações Identificadas
-
-Custos de gas elevados em redes públicas.
-Complexidade na configuração inicial para usuários não familiarizados com blockchain. -->
-
 ## Conclusão
 <!--Resumo dos Resultados:
 
