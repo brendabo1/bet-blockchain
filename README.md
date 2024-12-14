@@ -23,19 +23,19 @@ Imutabilidade e transparência.
 Gas fees e como afetam as transações.
 Introduza ferramentas como Ganache (blockchain local), Truffle (framework de desenvolvimento) e Metamask (carteira para interação com dApps). -->
 
-Blockchain é um banco de dados descentralizado, onde as informações são armazenadas em blocos, encadeados cronologicamente e protegidos por criptografia. Em vez de um servidor central, a rede é mantida por computadores distribuídos, eliminando intermediários e assegurando transações diretas. Após serem confirmados e adicionados à cadeia, os dados não podem ser alterados sem o consenso da rede, garantindo imutabilidade, transparência e segurança. Entre seus benefícios estão a descentralização, transparência, imutabilidade, segurança e eficiência nas transações. Para entender quando é necessario a utilização de uma blockchain, é necessario entender em quais cenarios essa tecnologia pode ser aplicada, por exemplo:
+Blockchain é a tecnologia inovadora de banco de dados que está no coração de quase todas as criptomoedas. Ao distribuir cópias idênticas de um banco de dados por uma rede inteira, o blockchain torna muito difícil hackear ou enganar o sistema. Embora a criptomoeda seja o uso mais popular para blockchain atualmente, a tecnologia oferece o potencial de servir a uma gama muito ampla de aplicações (Rodeck & Curry, 2022). Essencialmente, blockchain é um livro de registro descentralizado com cópias em cada nó da sua rede, onde as informações são armazenadas em blocos, encadeados cronologicamente e protegidos por criptografia. Em vez de um servidor central, a rede é mantida por computadores distribuídos, eliminando intermediários e assegurando transações diretas. 
+
+No funcionamento da blockchain, as transações são validadas pelos nós da rede, agrupadas em blocos com dados, timestamp e hashes criptográficos. Para adicionar um bloco à cadeia, os nós devem concordar sobre sua validade através de algoritmos de consenso como Proof of Work (PoW) ou Proof of Stake (PoS). As transações agrupadas dentro de blocos contém também informações do bloco anterior, de modo a evitar adulterações. Assim, para que um bloco seja incluido na "cadeia" compartilhada, os nós verificam a operação e, caso haja consenso, o um novo bloco gerado é conectado à estrutura. Após este estágio, as atualizações são propagadas na rede visando garantir o consenso, imutabilidade, transparência e segurança dos dados. Os dados de um bloco não podem ser alterados sem mudar todos os blocos subsequentes, o que exigiria o consenso de toda a rede. 
+Para entender quando é necessario a utilização de uma blockchain, é necessario entender em quais cenarios essa tecnologia pode ser aplicada, por exemplo:
 
 <p align="center">
   <img src="https://github.com/ZeDaManga01/Repositorio/blob/main/Voce%20precisa%20de%20uma%20blockchain.jpeg" />
 </p>
 
-No funcionamento da blockchain, as transações são validadas pelos nós da rede, agrupadas em blocos com dados, timestamp e hashes criptográficos. Para adicionar um bloco à cadeia, os nós devem concordar sobre sua validade através de algoritmos como Proof of Work (PoW) ou Proof of Stake (PoS).
 
-Ethereum é uma plataforma descentralizada e de código aberto que utiliza a criptomoeda Ether (ETH). Seu diferencial está na capacidade de executar contratos inteligentes, que são programas autoexecutáveis que realizam ações automaticamente quando certas condições são atendidas, permitindo a criação de aplicações descentralizadas (DApps) em diversas áreas como finanças descentralizadas (DeFi), jogos e gestão de cadeia de suprimentos.
+Ethereum é uma blockchain que dispoe de um ambiente de execução de seus contratos inteligentes, a Máquina Virtual Ethereum (EVM), e de código aberto que utiliza nativamente a criptomoeda Ether (ETH). Seu diferencial está na capacidade de executar contratos inteligentes, que são programas autoexecutáveis que realizam ações automaticamente quando certas condições são atendidas, permitindo a criação de aplicações descentralizadas (DApps) em diversas áreas como finanças descentralizadas (DeFi), jogos e gestão de cadeia de suprimentos.
 
-Gas Fees são taxas pagas para realizar transações e executar contratos inteligentes no Ethereum, variando conforme a complexidade da operação e a demanda pela rede, influenciando o custo e a velocidade das transações. A descentralização, imutabilidade e transparência da blockchain garantem que todas as transações e contratos sejam visíveis e não possam ser alterados.
-
-Ferramentas como Ganache, uma blockchain local para desenvolvimento e testes; Truffle, um framework para criação e deploy de contratos inteligentes; e Metamask, uma carteira para interação com DApps, são essenciais para o desenvolvimento e a interação com a rede Ethereum.
+Além disso, ferramentas e extensões compatíveis com a blockchain ethereum favorecem seu uso, como Ganache, um ambiente local para simular a blockchain Ethereum durante o desenvolvimento e testes, Truffle, um framework para criação e deploy de contratos inteligentes, e Metamask, uma carteira para interação com DApps, são essenciais para o desenvolvimento e a interação com a rede Ethereum.
 
 ### Contratos Inteligentes
 <!--O que são contratos inteligentes? Como eles automatizam processos?
@@ -88,7 +88,12 @@ A utilização de blockchain nas apostas oferece benefícios significativos, com
 ## Metodologia
 ### Arquitetura da Aplicação
 <!--Projeto e idealização descrevendo a modelagem dos contratos inteligentes no truffle, as principais funcionalidades (ex.: criar eventos, registrar apostas, resolver resultados), configuração do ambiente e rede local, deploy dos contratos e configuração das contas. Integração com Metamask. -->
+A aplicação desenvolvida com blockchain Ethereum em uma rede *peer-to-peer* (P2P) é organizada em camadas que interagem para a manutenção coletiva da estrutura de estados. Cada nó na rede representa um dispositivo 
+A solução desenvolvida utiliza o modelo de arquitetura de rede cliente-servidor. 
 
+a interface do usuário precisa interagir com um nó para se comunicar com o contrato inteligente, em vez de usar APIs REST ou GraphQL. O termo "Nó" refere-se a um computador que executa software Ethereum e se interconecta com outros nós em uma rede peer-to-peer para ajudar a protegê-la.
+
+Na Web 3.0 você pode escrever contratos inteligentes que definem a lógica de seus aplicativos e os implanta na máquina de estado descentralizada. Isso significa que todas as pessoas que desejam criar um aplicativo blockchain implantam seu código nessa máquina de estado compartilhada.
 <!-- Ethereum, Ganache, Truffle, Solidity, React (ou framework web escolhido), Metamask.
 .-->
 <!--Componentes principais:
@@ -157,6 +162,8 @@ Ethereum Foundation. (n.d.). Documentação para desenvolvedores. Ethereum. http
 101Blockchains. Você Precisa de Blockchain?. Disponível em: https://101blockchains.com/pt/voce-precisa-de-blockchain/. Acesso em: 13 dez. 2024.
 
 MetaMask. (n.d.). Referência de Ethereum. MetaMask. https://docs.metamask.io/services/reference/ethereum/. Acesso em: 12 dez. 2024
+
+Rodeck, David, and Benjamin Curry. "What is blockchain." Forbes (2022).
 
 Truffle Suite. Documentação do Truffle. Disponível em: https://archive.trufflesuite.com/docs/truffle/. Acesso em: 13 dez. 2024.
 
