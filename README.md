@@ -127,8 +127,15 @@ Recompensas são distribuídas automaticamente.-->
 <!--Destaque o que foi desenvolvido:
 Criação de eventos esportivos.
 Registro de apostas no contrato inteligente.
-Distribuição automática de prêmios.
-Mostre capturas de tela ou exemplos de transações (ex.: hash da transação, interação com o contrato). -->
+Distribuição automática de prêmios.. -->
+
+Criação de Eventos Esportivos: Ao acessar a plataforma, o usuário vê uma interface onde pode visualizar e cadastrar novos eventos de apostas esportivas. Na página principal, há uma opção para criar eventos, onde são solicitadas informações como o nome do evento, data, odds e outras condições relevantes para as apostas. O processo de criação é simples e intuitivo, e o usuário é notificado quando seu evento é registrado com sucesso na blockchain. Esse evento fica disponível para outros usuários participarem, promovendo uma experiência interativa e autônoma.
+
+Registro de Apostas: Quando o usuário deseja apostar, ele acessa os eventos disponíveis e seleciona em qual aposta deseja participar. A interface exibe as odds dinâmicas, que são ajustadas com base nas probabilidades do evento. Após a seleção do valor a ser apostado, o usuário confirma sua aposta, e ela é registrada automaticamente em um contrato inteligente. O valor da aposta e as odds selecionadas são salvos na blockchain, garantindo transparência e imutabilidade das transações. O usuário recebe uma confirmação instantânea sobre o registro de sua aposta.
+
+Distribuição Automática de Prêmios: Após o término de um evento esportivo, o sistema verifica automaticamente os resultados e executa o contrato inteligente para distribuir os prêmios. O usuário é notificado sobre o resultado da aposta e os valores ganhados. O processo de distribuição é rápido e ocorre sem a necessidade de intervenção manual, garantindo que os prêmios sejam entregues de maneira justa e transparente, diretamente para as carteiras dos vencedores. A operação de distribuição é visível na blockchain, assegurando que não haja manipulação nos resultados.
+
+Funcionalidade de Saque e Depósito: Na aplicação, o usuário pode realizar depósitos e saques diretamente usando sua carteira Metamask. Para o depósito, o usuário transfere criptomoeda (como Ether) para o endereço indicado, e o saldo é atualizado automaticamente após a confirmação na blockchain. Já no saque, o usuário escolhe o valor a ser retirado e a transação é enviada para seu endereço de carteira. Tanto depósitos quanto saques são validados por contratos inteligentes, garantindo segurança, transparência e atualização imediata do saldo na plataforma.
 
 ### Limitações Identificadas
 <!--Limitações Identificadas
