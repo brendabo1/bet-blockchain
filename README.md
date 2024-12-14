@@ -25,10 +25,16 @@ Introduza ferramentas como Ganache (blockchain local), Truffle (framework de des
 
 Blockchain é um banco de dados descentralizado, onde as informações são armazenadas em blocos, encadeados cronologicamente e protegidos por criptografia. Em vez de um servidor central, a rede é mantida por computadores distribuídos, eliminando intermediários e assegurando transações diretas. Após serem confirmados e adicionados à cadeia, os dados não podem ser alterados sem o consenso da rede, garantindo imutabilidade, transparência e segurança. Entre seus benefícios estão a descentralização, transparência, imutabilidade, segurança e eficiência nas transações. Para entender quando é necessario a utilização de uma blockchain, é necessario entender em quais cenarios essa tecnologia pode ser aplicada, por exemplo:
 
-<p align="center">
-  <img src="https://github.com/ZeDaManga01/Repositorio/blob/main/Voce%20precisa%20de%20uma%20blockchain.jpeg" />
-</p>
+<div align="center">
+  <figure>  
+    <img src="https://github.com/brendabo1/bet-blockchain/blob/main/images/Voce%20precisa%20de%20uma%20blockchain.jpeg">
+    <figcaption>
+      <p align="center"> 
 
+**Figura 1** - Fluxograma para avaliar a necessidade de uma blockchain
+    </figcaption>
+  </figure>
+</div>
 No funcionamento da blockchain, as transações são validadas pelos nós da rede, agrupadas em blocos com dados, timestamp e hashes criptográficos. Para adicionar um bloco à cadeia, os nós devem concordar sobre sua validade através de algoritmos como Proof of Work (PoW) ou Proof of Stake (PoS).
 
 Ethereum é uma plataforma descentralizada e de código aberto que utiliza a criptomoeda Ether (ETH). Seu diferencial está na capacidade de executar contratos inteligentes, que são programas autoexecutáveis que realizam ações automaticamente quando certas condições são atendidas, permitindo a criação de aplicações descentralizadas (DApps) em diversas áreas como finanças descentralizadas (DeFi), jogos e gestão de cadeia de suprimentos.
@@ -46,17 +52,14 @@ Exemplos de funções básicas de contratos inteligentes no contexto de apostas 
 Contratos inteligentes são acordos digitais programados para execução automática na blockchain, sem a necessidade de intermediários. Eles são transparentes, seguros e eficientes, garantindo que condições definidas sejam atendidas sem alterações externas. Entre seus principais usos estão transações financeiras, DApps, seguros, gestão de cadeia de suprimentos, propriedade intelectual e sistemas de votação.
 
 No funcionamento, desenvolvedores escrevem contratos usando Solidity e os implantam na blockchain. Quando as condições são atendidas, a rede valida e executa a ação automaticamente, registrando tudo de forma imutável e transparente.
-<p align="center">
-  <img src="https://github.com/ZeDaManga01/Repositorio/blob/main/Untitled.jpg" />
-</p>
 
 <div align="center">
   <figure>  
-    <img src="images/Sockets-Rede.png" width="600px">
+    <img src="https://github.com/brendabo1/bet-blockchain/blob/main/images/Untitled.jpg" width="600px">
     <figcaption>
       <p align="center"> 
 
-**Figura 1** - poe a legenda da imagem aq
+**Figura 2** - Funcionamento de um Smart Contract
     </figcaption>
   </figure>
 </div>
