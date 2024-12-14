@@ -52,7 +52,7 @@ Exemplos de funções básicas de contratos inteligentes no contexto de apostas 
 
 Contratos inteligentes são acordos digitais programados para execução automática na blockchain, sem a necessidade de intermediários. Eles são transparentes, seguros e eficientes, garantindo que condições definidas sejam atendidas sem alterações externas. Entre seus principais usos estão transações financeiras, DApps, seguros, gestão de cadeia de suprimentos, propriedade intelectual e sistemas de votação.
 
-No funcionamento, desenvolvedores escrevem contratos usando Solidity e os implantam na blockchain. Quando as condições são atendidas, a rede valida e executa a ação automaticamente, registrando tudo de forma imutável e transparente.
+Os desenvolvedores escrevem contratos usando Solidity e os implantam na blockchain para que, quando as condições são atendidas, a rede valide e execute a ação automaticamente, registrando tudo de forma imutável e transparente.
 
 <div align="center">
   <figure>  
@@ -90,24 +90,29 @@ A utilização de blockchain nas apostas oferece benefícios significativos, com
 
 
 ## Metodologia
+Para o desenvolvimento da aplicação descentralizada, a rede blockchain Ethereum foi utilizada bem como o framework Truffle para desenvolver, testar e implantar contratos inteligentes. Já a integração com a carteira digital MetaMask permitiu as funcionalidades de saques e depósitos de maneira intuitiva e eficiante no sistema. Além disso, visando simular uma blockchain Ethereum local, a ferramenta Ganache foi utilizada.
+
 ### Arquitetura da Aplicação
 <!--Projeto e idealização descrevendo a modelagem dos contratos inteligentes no truffle, as principais funcionalidades (ex.: criar eventos, registrar apostas, resolver resultados), configuração do ambiente e rede local, deploy dos contratos e configuração das contas. Integração com Metamask. -->
-A aplicação desenvolvida com blockchain Ethereum em uma rede *peer-to-peer* (P2P) é organizada em camadas que interagem para a manutenção coletiva da estrutura de estados. Cada nó na rede representa um dispositivo 
-A solução desenvolvida utiliza o modelo de arquitetura de rede cliente-servidor. 
+A aplicação desenvolvida com blockchain Ethereum privada em uma rede *peer-to-peer* (P2P) é organizada em camadas que interagem para a manutenção coletiva da estrutura de estados. Cada nó na rede representa um dispositivo que executa software Ethereum e se interconecta com outros nós.
 
-a interface do usuário precisa interagir com um nó para se comunicar com o contrato inteligente, em vez de usar APIs REST ou GraphQL. O termo "Nó" refere-se a um computador que executa software Ethereum e se interconecta com outros nós em uma rede peer-to-peer para ajudar a protegê-la.
+A primeira camada na arquitetura cujo usuário pode acessar é a interface web ou frontend, onde as informações, os eventos disponíveis, odds, saldos e históricos de transações podem ser visualizados. A integração com a carteira MetaMask possibilita que o usuário se conecte à aplicação descentralizada (dApp), gerencie suas chaves privadas e assine transações de forma segura, garantindo que somente o proprietário da conta possa autorizar operações. Em seguida, os contratos inteligentes, escritos em Solidity, implementam as regras de negócio, como registro de eventos, execução de apostas, cálculo de odds dinâmicas e distribuição de recompensas. Estes contratos são executados na Máquina Virtual Ethereum de maneira independente e automática nos nós da rede de acordo com os dados da transação. Por fim, a camada de blockchain é a base da aplicação, responsável por armazenar dados críticos e executar contratos inteligentes. A blockchain Ethereum serve como o backend descentralizado da dApp, garantindo a integridade e a imutabilidade das informações. Além disso, a blockchain utiliza o algoritmo de consenso Proof of Stake (PoS) para validar transações de maneira segura e eficiente, eliminando a necessidade de intermediários. É importante destacar que ao simular uma blockchain Ethereum local através do Ganache, o algoritmo de consenso é simplificado para facilitar o desenvolvimento e os testes.
 
-Na Web 3.0 você pode escrever contratos inteligentes que definem a lógica de seus aplicativos e os implanta na máquina de estado descentralizada. Isso significa que todas as pessoas que desejam criar um aplicativo blockchain implantam seu código nessa máquina de estado compartilhada.
-<!-- Ethereum, Ganache, Truffle, Solidity, React (ou framework web escolhido), Metamask.
-.-->
-<!--Componentes principais:
-Blockchain Ethereum: Rede onde os contratos inteligentes são implantados.
-Ganache: Ambiente local para simular a blockchain Ethereum durante o desenvolvimento.
-Truffle: Framework para desenvolver, testar e implantar contratos inteligentes.
-Frontend Web (React/Next.js) ou terminal: Interface para os usuários interagirem com os contratos inteligentes.
-Metamask: Carteira usada para conectar os usuários à aplicação descentralizada (dApp) 
-Explique a escolha dessas ferramentas e seus papéis no projeto
--->
+O esquema da Figura 3 apresenta a arquitetura descrita da aplicação. 
+
+<div align="center">
+  <figure>  
+    <img src="images\arquitetura dapp.jpg" width="600px">
+    <figcaption>
+      <p align="center"> 
+
+**Figura 2** - Exemplo da intercomunicação entre duas vias por meio de soquetes no modelo cliente-servidor
+
+</p>
+    </figcaption>
+  </figure>
+</div>
+
 ### Fluxo de Funcionamento
 <!--
 Descreva o fluxo da aplicação:
