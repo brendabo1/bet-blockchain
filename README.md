@@ -28,10 +28,17 @@ Blockchain é a tecnologia inovadora de banco de dados que está no coração de
 No funcionamento da blockchain, as transações são validadas pelos nós da rede, agrupadas em blocos com dados, timestamp e hashes criptográficos. Para adicionar um bloco à cadeia, os nós devem concordar sobre sua validade através de algoritmos de consenso como Proof of Work (PoW) ou Proof of Stake (PoS). As transações agrupadas dentro de blocos contém também informações do bloco anterior, de modo a evitar adulterações. Assim, para que um bloco seja incluido na "cadeia" compartilhada, os nós verificam a operação e, caso haja consenso, o um novo bloco gerado é conectado à estrutura. Após este estágio, as atualizações são propagadas na rede visando garantir o consenso, imutabilidade, transparência e segurança dos dados. Os dados de um bloco não podem ser alterados sem mudar todos os blocos subsequentes, o que exigiria o consenso de toda a rede. 
 Para entender quando é necessario a utilização de uma blockchain, é necessario entender em quais cenarios essa tecnologia pode ser aplicada, por exemplo:
 
-<p align="center">
-  <img src="https://github.com/ZeDaManga01/Repositorio/blob/main/Voce%20precisa%20de%20uma%20blockchain.jpeg" />
-</p>
+<div align="center">
+  <figure>  
+    <img src="https://github.com/brendabo1/bet-blockchain/blob/main/images/Voce%20precisa%20de%20uma%20blockchain.jpeg">
+    <figcaption>
+      <p align="center"> 
 
+**Figura 1** - Fluxograma para avaliar a necessidade de uma blockchain
+    </figcaption>
+  </figure>
+</div>
+No funcionamento da blockchain, as transações são validadas pelos nós da rede, agrupadas em blocos com dados, timestamp e hashes criptográficos. Para adicionar um bloco à cadeia, os nós devem concordar sobre sua validade através de algoritmos como Proof of Work (PoW) ou Proof of Stake (PoS).
 
 Ethereum é uma blockchain que dispoe de um ambiente de execução de seus contratos inteligentes, a Máquina Virtual Ethereum (EVM), e de código aberto que utiliza nativamente a criptomoeda Ether (ETH). Seu diferencial está na capacidade de executar contratos inteligentes, que são programas autoexecutáveis que realizam ações automaticamente quando certas condições são atendidas, permitindo a criação de aplicações descentralizadas (DApps) em diversas áreas como finanças descentralizadas (DeFi), jogos e gestão de cadeia de suprimentos.
 
@@ -46,17 +53,14 @@ Exemplos de funções básicas de contratos inteligentes no contexto de apostas 
 Contratos inteligentes são acordos digitais programados para execução automática na blockchain, sem a necessidade de intermediários. Eles são transparentes, seguros e eficientes, garantindo que condições definidas sejam atendidas sem alterações externas. Entre seus principais usos estão transações financeiras, DApps, seguros, gestão de cadeia de suprimentos, propriedade intelectual e sistemas de votação.
 
 No funcionamento, desenvolvedores escrevem contratos usando Solidity e os implantam na blockchain. Quando as condições são atendidas, a rede valida e executa a ação automaticamente, registrando tudo de forma imutável e transparente.
-<p align="center">
-  <img src="https://github.com/ZeDaManga01/Repositorio/blob/main/Untitled.jpg" />
-</p>
 
 <div align="center">
   <figure>  
-    <img src="images/Sockets-Rede.png" width="600px">
+    <img src="https://github.com/brendabo1/bet-blockchain/blob/main/images/Untitled.jpg" width="600px">
     <figcaption>
       <p align="center"> 
 
-**Figura 1** - poe a legenda da imagem aq
+**Figura 2** - Funcionamento de um Smart Contract
     </figcaption>
   </figure>
 </div>
@@ -149,13 +153,7 @@ Integração com APIs esportivas para resultados automáticos de eventos.
 
 ## Referências
 
-Binance Academy. (n.d.). What is Ethereum? Binance Academy. https://academy.binance.com/en/articles/what-is-ethereum#How-Does-Ethereum-Work. Acesso em: 10 dez. 2024
-
-Binance Academy. (n.d.). What are smart contracts? Binance Academy. https://academy.binance.com/en/articles/what-are-smart-contracts#How-Do-Smart-Contracts-Work. Acesso em: 10 dez. 2024
-
-Binance Academy. (n.d.). What are decentralized applications (DApps)? Binance Academy. https://academy.binance.com/en/articles/what-are-decentralized-applications-dapps. Acesso em: 10 dez. 2024
-
-Binance Academy. (n.d.). What is blockchain and how does it work? Binance Academy. https://academy.binance.com/en/articles/what-is-blockchain-and-how-does-it-work#How-Does-Blockchain-Work. Acesso em: 10 dez. 2024
+Binance Academy. (n.d.). Binance Academy. Retrieved from https://academy.binance.com/en/. Acesso em: 10 dez. 2024
 
 Ethereum Foundation. (n.d.). Documentação para desenvolvedores. Ethereum. https://ethereum.org/pt-br/developers/docs/. Acesso em: 10 dez. 2024
 
