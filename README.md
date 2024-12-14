@@ -30,7 +30,7 @@ Para entender quando é necessario a utilização de uma blockchain, é necessar
 
 <div align="center">
   <figure>  
-    <img src="https://github.com/brendabo1/bet-blockchain/blob/main/images/Voce%20precisa%20de%20uma%20blockchain.jpeg">
+    <img src="images\Voce precisa de uma blockchain.jpeg">
     <figcaption>
       <p align="center"> 
 
@@ -56,7 +56,7 @@ No funcionamento, desenvolvedores escrevem contratos usando Solidity e os implan
 
 <div align="center">
   <figure>  
-    <img src="https://github.com/brendabo1/bet-blockchain/blob/main/images/Untitled.jpg" width="600px">
+    <img src="images\Untitled.jpg" width="600px">
     <figcaption>
       <p align="center"> 
 
