@@ -15,7 +15,7 @@ Neste cenário, a tecnologia blockchain surge como uma solução promissora, per
 A aplicação desenvolvida permite que os usuários realizaem depósitos, saques, registrem novos eventos de aposta ou participem de eventos já registrados, com odds dinâmicas ajustadas com base nas probabilidades de cada evento. Após o encerramento de um evento, o saldo dos participantes é automaticamente atualizado, e os resultados são armazenados no histórico, disponíveis publicamente na blockchain para garantir transparência e confiabilidade. Desse modo, a solução utiliza contratos inteligentes para automatizar processos, garantindo que todas as transações sejam verificáveis, imutáveis e executadas sem interferências externas, promovendo uma experiência justa e confiável para os usuários.
 ##  Fundamentação
 
-### Blockchain 
+### Blockchain & Ethereum 
 <!--Explique o que é blockchain e como o Ethereum se diferencia, com foco em contratos inteligentes.
 Conceitos importantes:
 Descentralização.
@@ -23,27 +23,19 @@ Imutabilidade e transparência.
 Gas fees e como afetam as transações.
 Introduza ferramentas como Ganache (blockchain local), Truffle (framework de desenvolvimento) e Metamask (carteira para interação com dApps). -->
 
-#### O Que é Blockchain?
-Blockchain é uma forma especial de banco de dados: um livro-razão digital descentralizado mantido por uma rede distribuída de computadores. Os dados são organizados em blocos, dispostos em ordem cronológica e protegidos por criptografia, garantindo transparência, segurança e imutabilidade.
-Uma vez confirmados e adicionados à cadeia, os dados não podem ser alterados sem consenso da rede. A descentralização elimina a necessidade de intermediários, permitindo transações diretas entre usuários.
+Blockchain é um banco de dados descentralizado, onde as informações são armazenadas em blocos, encadeados cronologicamente e protegidos por criptografia. Em vez de um servidor central, a rede é mantida por computadores distribuídos, eliminando intermediários e assegurando transações diretas. Após serem confirmados e adicionados à cadeia, os dados não podem ser alterados sem o consenso da rede, garantindo imutabilidade, transparência e segurança. Entre seus benefícios estão a descentralização, transparência, imutabilidade, segurança e eficiência nas transações. Para entender quando é necessario a utilização de uma blockchain, é necessario entender em quais cenarios essa tecnologia pode ser aplicada, por exemplo:
 
-#### Características e Benefícios da Blockchain
+<p align="center">
+  <img src="https://github.com/ZeDaManga01/Repositorio/blob/main/Voce%20precisa%20de%20uma%20blockchain.jpeg" />
+</p>
 
-* Descentralização: Dados armazenados em múltiplos nós em vez de um servidor central.
-*	Transparência: Todos os participantes têm acesso ao mesmo banco de dados.
-*	Imutabilidade: Dados não podem ser alterados sem consenso.
-* Segurança: Criptografia e mecanismos de consenso evitam manipulações.
-*	Eficiência: Transações mais rápidas e econômicas sem intermediários.
+No funcionamento da blockchain, as transações são validadas pelos nós da rede, agrupadas em blocos com dados, timestamp e hashes criptográficos. Para adicionar um bloco à cadeia, os nós devem concordar sobre sua validade através de algoritmos como Proof of Work (PoW) ou Proof of Stake (PoS).
 
-#### Funcionamento
+Ethereum é uma plataforma descentralizada e de código aberto que utiliza a criptomoeda Ether (ETH). Seu diferencial está na capacidade de executar contratos inteligentes, que são programas autoexecutáveis que realizam ações automaticamente quando certas condições são atendidas, permitindo a criação de aplicações descentralizadas (DApps) em diversas áreas como finanças descentralizadas (DeFi), jogos e gestão de cadeia de suprimentos.
 
-1.	Registro de Transações: Transações são validadas por nós na rede.
-2.	Formação de Blocos: Transações são agrupadas em blocos, cada qual contendo dados, um timestamp e hashes criptográficos.
-3.	Mecanismo de Consenso: Para adicionar um bloco, os nós concordam com sua validade através de algoritmos como Proof of Work (PoW) ou Proof of Stake (PoS).
-________________________________________
-### Ethereum
-Ethereum é uma plataforma descentralizada de código aberto movida pela criptomoeda Ether (ETH). Seu diferencial está na capacidade de executar contratos inteligentes – programas autônomos que realizam ações pré-definidas ao atenderem certas condições.
-Essa funcionalidade permite a criação de aplicações descentralizadas (DApps), abrangendo desde finanças descentralizadas (DeFi) até jogos e gestão de cadeia de suprimentos. A infraestrutura robusta do Ethereum o torna uma ferramenta indispensável no avanço de tecnologias descentralizadas
+Gas Fees são taxas pagas para realizar transações e executar contratos inteligentes no Ethereum, variando conforme a complexidade da operação e a demanda pela rede, influenciando o custo e a velocidade das transações. A descentralização, imutabilidade e transparência da blockchain garantem que todas as transações e contratos sejam visíveis e não possam ser alterados.
+
+Ferramentas como Ganache, uma blockchain local para desenvolvimento e testes; Truffle, um framework para criação e deploy de contratos inteligentes; e Metamask, uma carteira para interação com DApps, são essenciais para o desenvolvimento e a interação com a rede Ethereum.
 
 ### Contratos Inteligentes
 <!--O que são contratos inteligentes? Como eles automatizam processos?
@@ -51,17 +43,13 @@ Linguagem de programação usada (Solidity).
 Exemplos de funções básicas de contratos inteligentes no contexto de apostas (ex.: criação de eventos, registro de apostas, distribuição de prêmios).
  -->
 
-Contratos inteligentes são acordos digitais programados, armazenados e executados automaticamente na blockchain, sem a necessidade de intermediários. Eles se destacam pela transparência, segurança e eficiência.
+Contratos inteligentes são acordos digitais programados para execução automática na blockchain, sem a necessidade de intermediários. Eles são transparentes, seguros e eficientes, garantindo que condições definidas sejam atendidas sem alterações externas. Entre seus principais usos estão transações financeiras, DApps, seguros, gestão de cadeia de suprimentos, propriedade intelectual e sistemas de votação.
 
-Principais Usos:
-* Transações financeiras.
-* Aplicações descentralizadas (DApps).
-*	Seguros, gestão de cadeia de suprimentos, propriedade intelectual e sistemas de votação.
-
-Funcionamento Simplificado:
-1.	Criação e implantação: Desenvolvedores programam contratos usando linguagens como Solidity e os integram à blockchain.
-2.	Execução automatizada: Condições especificadas no contrato são verificadas pela rede, acionando a execução sem intervenção humana.
-3.	Registro imutável: Transações são armazenadas de forma permanente e transparente.
+No funcionamento, desenvolvedores escrevem contratos usando Solidity e os implantam na blockchain. Quando as condições são atendidas, a rede valida e executa a ação automaticamente, registrando tudo de forma imutável e transparente.
+<p align="center">
+  <img src="https://github.com/ZeDaManga01/Repositorio/blob/main/Untitled.jpg" />
+</p>
+No contexto de apostas, contratos inteligentes podem ser usados para criar eventos, registrar apostas e distribuir prêmios automaticamente após o resultado. Isso inclui definir odds, registrar valores apostados e distribuir os prêmios aos vencedores de forma automatizada.
 ________________________________________
 
 ### Aplicações Descentralizadas
@@ -70,12 +58,9 @@ Interação entre frontend, blockchain e contratos inteligentes.
 Papel de bibliotecas como Web3.js ou ethers.js na conexão com a blockchain.
  -->
 
-Uma aplicação descentralizada ou DApps são aplicativos baseados em blockchain que oferecem maior segurança e transparência ao distribuírem o controle entre múltiplos participantes, eliminando servidores centralizados.
-Exemplo:
-Uma DApp de mídia social armazena postagens diretamente na blockchain, tornando-as acessíveis a toda a rede, sem controle de empresas centralizadas.
-Principais Funcionalidades:
-*	Finanças descentralizadas (DeFi).
-*	Jogos, sistemas de votação e criação de arte digital.
+Uma DApp (Aplicação Descentralizada) é um aplicativo baseado em blockchain, sem servidores centralizados, oferecendo segurança e transparência ao distribuir o controle entre os participantes. Sua arquitetura é composta pelo frontend (interface do usuário), a blockchain (onde os dados são armazenados de forma imutável) e os contratos inteligentes (programas que executam ações automaticamente). O frontend interage com a blockchain e os contratos inteligentes, enviando e recebendo informações.
+
+Bibliotecas como Web3.js e ethers.js são usadas para conectar o frontend à blockchain, facilitando a comunicação e execução de transações e contratos inteligentes, permitindo a criação de DApps de maneira mais simples e segura.
 
 ### Apostas Esportivas
 <!--Contextualize o mercado de apostas esportivas.
@@ -83,16 +68,9 @@ Problemas comuns em plataformas tradicionais (ex.: confiança, manipulação, al
 Benefícios de usar blockchain nesse cenário.
  -->
 
- Apostas esportivas envolvem a previsão de resultados de eventos esportivos, com apostas baseadas nessas previsões. O setor tem crescido impulsionado por avanços tecnológicos e regulamentações.
-Funcionamento Básico:
-1.	Escolha do evento: Apostadores selecionam partidas ou competições.
-2.	Tipos de apostas:
-  * Simples: Previsão de um único resultado.
-  * Múltiplas: Combinação de várias apostas.
-  * Ao vivo: Feitas durante o evento.
-3.	Cotações (odds): Definem o retorno potencial, variando conforme a probabilidade do evento ocorrer.
-4.	Resultado e pagamento: Acertos geram prêmios proporcionais às odds; erros resultam na perda do valor apostado.
-A tecnologia blockchain traz inovação às apostas, garantindo transparência e segurança por meio de contratos inteligentes e registros imutáveis.		
+O mercado de apostas esportivas tem crescido impulsionado por avanços tecnológicos e pela regulamentação em vários países. Em plataformas tradicionais, há problemas como falta de confiança, manipulação de resultados e altas taxas de intermediários. No funcionamento das apostas, os apostadores escolhem eventos e tipos de apostas, como simples, múltiplas e ao vivo, com as odds determinando o retorno potencial.
+
+A utilização de blockchain nas apostas oferece benefícios significativos, como maior transparência, pois todas as transações ficam registradas publicamente e são imutáveis. A segurança também é aprimorada por meio de criptografia e contratos inteligentes, que protegem os dados e os pagamentos, evitando fraudes. Além disso, a eliminação de intermediários torna as transações mais rápidas e com custos mais baixos, oferecendo uma plataforma mais justa e eficiente em comparação com as tradicionais.
 
 
 ## Metodologia
@@ -153,3 +131,23 @@ Integração com APIs esportivas para resultados automáticos de eventos.
  -->
 
 ## Referências
+
+Binance Academy. (n.d.). What is Ethereum? Binance Academy. https://academy.binance.com/en/articles/what-is-ethereum#How-Does-Ethereum-Work. Acesso em: 10 dez. 2024
+
+Binance Academy. (n.d.). What are smart contracts? Binance Academy. https://academy.binance.com/en/articles/what-are-smart-contracts#How-Do-Smart-Contracts-Work. Acesso em: 10 dez. 2024
+
+Binance Academy. (n.d.). What are decentralized applications (DApps)? Binance Academy. https://academy.binance.com/en/articles/what-are-decentralized-applications-dapps. Acesso em: 10 dez. 2024
+
+Binance Academy. (n.d.). What is blockchain and how does it work? Binance Academy. https://academy.binance.com/en/articles/what-is-blockchain-and-how-does-it-work#How-Does-Blockchain-Work. Acesso em: 10 dez. 2024
+
+Ethereum Foundation. (n.d.). Documentação para desenvolvedores. Ethereum. https://ethereum.org/pt-br/developers/docs/. Acesso em: 10 dez. 2024
+
+101Blockchains. Você Precisa de Blockchain?. Disponível em: https://101blockchains.com/pt/voce-precisa-de-blockchain/. Acesso em: 13 dez. 2024.
+
+MetaMask. (n.d.). Referência de Ethereum. MetaMask. https://docs.metamask.io/services/reference/ethereum/. Acesso em: 12 dez. 2024
+
+Truffle Suite. Documentação do Truffle. Disponível em: https://archive.trufflesuite.com/docs/truffle/. Acesso em: 13 dez. 2024.
+
+Truffle Suite. Documentação do Ganache. Disponível em: https://archive.trufflesuite.com/docs/ganache/. Acesso em: 13 dez. 2024.
+
+MB. O que é Ethereum. Disponível em: https://www.mb.com.br/economia-digital/guia/o-que-e-ethereum/. Acesso em: 13 dez. 2024.
