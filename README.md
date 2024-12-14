@@ -147,13 +147,7 @@ Integração com APIs esportivas para resultados automáticos de eventos.
 
 ## Referências
 
-Binance Academy. (n.d.). What is Ethereum? Binance Academy. https://academy.binance.com/en/articles/what-is-ethereum#How-Does-Ethereum-Work. Acesso em: 10 dez. 2024
-
-Binance Academy. (n.d.). What are smart contracts? Binance Academy. https://academy.binance.com/en/articles/what-are-smart-contracts#How-Do-Smart-Contracts-Work. Acesso em: 10 dez. 2024
-
-Binance Academy. (n.d.). What are decentralized applications (DApps)? Binance Academy. https://academy.binance.com/en/articles/what-are-decentralized-applications-dapps. Acesso em: 10 dez. 2024
-
-Binance Academy. (n.d.). What is blockchain and how does it work? Binance Academy. https://academy.binance.com/en/articles/what-is-blockchain-and-how-does-it-work#How-Does-Blockchain-Work. Acesso em: 10 dez. 2024
+Binance Academy. (n.d.). Binance Academy. Retrieved from https://academy.binance.com/en/. Acesso em: 10 dez. 2024
 
 Ethereum Foundation. (n.d.). Documentação para desenvolvedores. Ethereum. https://ethereum.org/pt-br/developers/docs/. Acesso em: 10 dez. 2024
 
