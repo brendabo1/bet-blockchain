@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Galindo&display=swap');
+
+body {
+    background-color: #1F1A3A;
+    margin: 0;
+    font-family: "Galindo", sans-serif;
+    
+  }
+
+  h1 {
+    position: absolute;
+    left: 25px;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    color: #2760A7; /* Cor do texto */
+    font-size: 48px;
+    
+    /* Primeiro, criamos uma borda rosa externa */
+    text-shadow: 
+      1px 0 0 white, /* Direita */
+      0 1px 0 white, /* Baixo */
+      -1px 0 0 white, /* Esquerda */
+      0 -1px 0 white, /* Cima */
+      1px 1px white, /* Diagonal inferior direita */
+      -1px -1px 0 white, /* Diagonal superior esquerda */
+      1px -1px 0 white, /* Diagonal superior direita */
+      -1px 1px 0 white; /* Diagonal inferior esquerda */
+    
+    /* Então, criamos uma borda branca interna */
+    text-shadow: 
+      1px 0 0 white, 
+      0 1px 0 white, 
+      -1px 0 0 white, 
+      0 -1px 0 white, 
+      1px 1px white, 
+      -1px -1px 0 white, 
+      1px -1px 0 white, 
+      -1px 1px 0 white,
+      0 0 10px #F972BF, /* Borda branca interna, ajuste o valor de 2px para controlar a espessura */
+      0 0 10px #F972BF;
+  }
+
+button.sacar,
+button.depositar{
+  font-family: "Galindo", sans-serif;
+  position: absolute;
+  background:#2760A7 ;  
+  padding: 10px 20px;
+  color: #F8F8F8;
+  border: 'none';
+  cursor: 'pointer';
+  height: 60px;
+  width: 110px;
+  border-radius: 20px;
+}
+
+button.sacar{
+  top: 35px; 
+  right: 210px; 
+}
+
+button.depositar{
+  top: 35px; 
+  right: 80px; 
+}
+
+
+button.sacar:hover, button.depositar:hover{
+  color: #f8f8f8;
+  background: #F972BF;
+}

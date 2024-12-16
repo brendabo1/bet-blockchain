@@ -1,0 +1,64 @@
+form.entrar,
+form.buscar{
+    font-family: "Galindo", sans-serif;
+    position: absolute;
+    display: flex;
+    background: #2760A7;
+    width: 500px;
+    height: 35px;
+    color: #F8F8F8;
+
+}
+
+form.entrar{
+    left: 600px;
+    top: 180px;
+}
+form.buscar{
+    left: 600px;
+    top: 250px;
+}
+
+
+input.buscarInput,
+input.entrarInput{
+    font-family: "Galindo", sans-serif;
+    background: #2760A7;
+    display: flex;
+    width: 100%;
+    color: #F8F8F8;
+
+}
+
+input.buscarInput::placeholder,
+input.entrarInput::placeholder {
+    color: #F8F8F8; 
+}
+
+button.botaoEntrar,
+button.botaoBuscar{
+    font-family: "Galindo", sans-serif;
+    position: absolute;
+    background:#2760A7 ;  
+    padding: 10px 20px;
+    color: #F8F8F8;
+    border: 'none';
+    cursor: 'pointer';
+    height: 45px;
+    width: 100px;
+    border-radius: 10px;
+}
+
+button.botaoEntrar{
+    left: 510px;
+}
+
+button.botaoBuscar{
+    left: 510px;
+}
+
+button.botaoEntrar:hover,
+button.botaoBuscar:hover{
+    background: #F972BF;
+
+}
