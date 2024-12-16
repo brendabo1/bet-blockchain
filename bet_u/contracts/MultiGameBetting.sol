@@ -35,7 +35,8 @@ contract MultiGameBetting {
     }
 
     event GameCreated(uint256 gameId, string gameName, string team1, string team2);
-    event BetPlaced(uint256 gameId, address bettor, uint256 amount, uint16 teamSelected, uint256 newOdds);
+    //event BetPlaced(uint256 gameId, address bettor, uint256 amount, uint16 teamSelected, uint256 newOdds);
+    event BetPlaced(uint256 gameId, address bettor, uint256 amount, uint16 teamSelected, uint256 newOddsTeam1, uint256 newOddsTeam2);
     event PrizesDistributed(uint256 gameId, uint16 winningTeam);
 
     constructor() {
