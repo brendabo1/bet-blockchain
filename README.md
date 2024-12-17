@@ -25,12 +25,24 @@ Em uma blockchain, as transações são agrupadas em blocos a serem validados pe
 
 Hashing é uma operação matemática que transforma os dados do bloco em um código alfanumérico fixo de comprimento definido, chamado hash. Este hash é único para cada conjunto de dados, de forma que mesmo uma pequena alteração nos dados gera um hash completamente diferente. Essa característica do hashing, combinada com a ligação dos hashes entre os blocos, torna a blockchain resistente a fraudes. Qualquer tentativa de modificar os dados em um bloco exigiria o recalculo dos hashes de todos os blocos subsequentes, o que é computacionalmente inviável em uma rede descentralizada. Assim, o hashing e a validação conjunta asseguram a segurança, integridade e confiabilidade da blockchain
 
-Assim, para que um bloco seja incluido na cadeia compartilhada, os nós verificam a operação e, caso haja consenso, o um novo bloco gerado é conectado à estrutura. Após este estágio, as atualizações são propagadas na rede visando garantir o consenso, imutabilidade, transparência e segurança dos dados. 
+Assim, para que um bloco seja incluido na cadeia compartilhada, os nós verificam a operação e, caso haja consenso, o um novo bloco gerado é conectado à estrutura, como o fluxo apresentado na Figura 1. Após este estágio, as atualizações são propagadas na rede visando garantir o consenso, imutabilidade, transparência e segurança dos dados. 
 
 É relevante mencionar a distinção entre dois tipos principais de blockchain: as públicas e as privadas. Blockchains públicas são abertas, acessíveis a todos e priorizam transparência, mas podem ser mais lentas e consumir mais energia devido à descentralização total. São ideais para projetos onde a confiança e a auditoria são essenciais.
 Blockchains privadas, por sua vez, limitam o acesso a usuários autorizados, sendo controladas por uma entidade ou consórcio. Oferecem maior eficiência e privacidade, tornando-se mais adequadas para aplicações empresariais que exigem desempenho e segurança.
 
-Apesar das vantagens de integridade, segurança, anonimidade e privacidade que uma rede blockchain fornece, existem limitações quanto ao processamento de transações, com alta latência e custos operacionais. Dessa maneira, identificar as necessidades da aplicação é essencial antes do uso da blockchain. A figura 1 apresenta um fluxograma intuitivo para entender em quais cenarios essa tecnologia pode ser bemaplicada.
+Apesar das vantagens de integridade, segurança, anonimidade e privacidade que uma rede blockchain fornece, existem limitações quanto ao processamento de transações, com alta latência e custos operacionais. Dessa maneira, identificar as necessidades da aplicação é essencial antes do uso da blockchain. A Figura 2 apresenta um esquema intuitivo para entender em quais cenarios essa tecnologia pode ser bemaplicada.
+<div align="center">
+  <figure>  
+    <img src="images/BLOCKCHAIN.png">
+    <figcaption>
+      <p align="center"> 
+
+**Figura 1** - Fluxo de funcionamento da blockchain.
+Fonte: Distrito
+    </figcaption>
+  </figure>
+</div>
+
 
 <div align="center">
   <figure>  
@@ -38,7 +50,7 @@ Apesar das vantagens de integridade, segurança, anonimidade e privacidade que u
     <figcaption>
       <p align="center"> 
 
-**Figura 1** - Fluxograma para avaliar a necessidade de uma blockchain
+**Figura 2** - Equema para avaliar a necessidade de uma blockchain
     </figcaption>
   </figure>
 </div>
@@ -65,7 +77,7 @@ Os desenvolvedores escrevem contratos usando Solidity e os implantam na blockcha
     <figcaption>
       <p align="center"> 
 
-**Figura 2** - Funcionamento de um Smart Contract
+**Figura 3** - Funcionamento de um Smart Contract
     </figcaption>
   </figure>
 </div>
@@ -95,7 +107,35 @@ A utilização de blockchain nas apostas oferece benefícios significativos, com
 
 
 ## Metodologia
-Para o desenvolvimento da aplicação descentralizada, a rede blockchain Ethereum foi utilizada bem como o framework Truffle para desenvolver, testar e implantar contratos inteligentes. Já a integração com a carteira digital MetaMask permitiu as funcionalidades de saques e depósitos de maneira intuitiva e eficiante no sistema. Além disso, visando simular uma blockchain Ethereum local, a ferramenta Ganache foi utilizada.
+Para o desenvolvimento da aplicação descentralizada, a rede blockchain Ethereum foi utilizada bem como o framework Truffle v5.11.5 (core: 5.11.5), Node v22.12.0 e a web3.js v1.10.0 para desenvolver, testar e implantar contratos inteligentes compilados usando o compilador solidity Solc 0.8.19. Já a integração com a carteira digital MetaMask permitiu as funcionalidades de saques e depósitos de maneira intuitiva e eficiante no sistema. 
+
+Para facilitar o desenvolvimento e a simulação de contratos inteligentes, a ferramenta Ganache é amplamente utilizada. Ganache é um ambiente local que emula uma blockchain Ethereum, permitindo a criação de uma rede privada para desenvolvimento e testes. Ele fornece um conjunto de contas pré-configuradas com saldo fictício em Ether, como é apresentado na Figura 4, permitindo que desenvolvedores realizem transações, implantem contratos inteligentes e simulem o comportamento da rede sem custos reais. Através da versão na versão v7.9.1 utilizada no projeto, também foi possível obter informações detalhadas sobre o processamento das transações, como consumo de gás, logs de eventos e alterações no estado dos contratos como é exibido na Figura 5.
+
+<div align="center">
+  <figure>  
+    <img src="images/contas_ganache.png">
+    <figcaption>
+      <p align="center"> 
+
+**Figura 4** - Contas e suas chaves privadas criadas automaticamente no ambiente de simulação Ganache
+
+</p>
+    </figcaption>
+  </figure>
+</div>
+
+<div align="center">
+  <figure>  
+    <img src="images/transações.png">
+    <figcaption>
+      <p align="center"> 
+
+**Figura 5** - Interface de transações da blockchain no ambiente de simulação Ganache após criar jogos e realizar apostas
+
+</p>
+    </figcaption>
+  </figure>
+</div>
 
 ### Arquitetura da Aplicação
 <!--Projeto e idealização descrevendo a modelagem dos contratos inteligentes no truffle, as principais funcionalidades (ex.: criar eventos, registrar apostas, resolver resultados), configuração do ambiente e rede local, deploy dos contratos e configuração das contas. Integração com Metamask. -->
@@ -103,17 +143,32 @@ A aplicação desenvolvida com blockchain Ethereum privada em uma rede *peer-to-
 
 A primeira camada na arquitetura cujo usuário pode acessar é a interface web ou frontend, onde as informações, os eventos disponíveis, odds, saldos e históricos de transações podem ser visualizados. A integração com a carteira MetaMask possibilita que o usuário se conecte à aplicação descentralizada (dApp), gerencie suas chaves privadas e assine transações de forma segura, garantindo que somente o proprietário da conta possa autorizar operações. 
 
-Em seguida, as solicitações de serviço do usuário são processadas pelos nós da rede, sendo estes outros usuários e dispositivos que executam software Ethereum e se interconecta com outros nós. Nessa rede, os contratos inteligentes, escritos em Solidity, implementam as regras de negócio, como registro de eventos, execução de apostas, cálculo de odds dinâmicas e distribuição de recompensas. Estes contratos são executados na Máquina Virtual Ethereum de maneira independente e automática nos nós da rede de acordo com os dados da transação. Por fim, a camada de blockchain é a base da aplicação, responsável por armazenar dados críticos e executar contratos inteligentes. A blockchain Ethereum serve como o backend descentralizado da dApp, garantindo a integridade e a imutabilidade das informações. Além disso, a blockchain utiliza o algoritmo de consenso Proof of Stake (PoS) para validar transações de maneira segura e eficiente, eliminando a necessidade de intermediários. É importante destacar que ao simular uma blockchain Ethereum local através do Ganache, o algoritmo de consenso é simplificado para facilitar o desenvolvimento e os testes.
-
-O esquema da Figura 3 apresenta a arquitetura descrita da aplicação. 
+Em seguida, as solicitações de serviço do usuário são processadas pelos nós da rede, sendo estes outros usuários e dispositivos que executam software Ethereum e se interconecta com outros nós. Nessa rede, os contratos inteligentes, escritos em Solidity, implementam as regras de negócio, como registro de eventos, execução de apostas, cálculo de odds dinâmicas e distribuição de recompensas. Estes contratos são executados na Máquina Virtual Ethereum de maneira independente e automática nos nós da rede de acordo com os dados da transação. Por fim, a camada de blockchain é a base da aplicação, responsável por armazenar dados críticos e executar contratos inteligentes. O contrato inteligente compilado possui um custo no processamento descontado do nó proprietário que o submente na rede, este custo pode ser analisado na dedução do saldo da conta de index 0 da Figura 6.
 
 <div align="center">
   <figure>  
-    <img src="images\arquitetura dapp.jpg" width="600px">
+    <img src="images/contrato_compilado.png">
     <figcaption>
       <p align="center"> 
 
-**Figura 3** - Exemplo da intercomunicação entre duas vias por meio de soquetes no modelo cliente-servidor
+**Figura 6** - Contas no ambiente de simulação após o deploy do contrato inteligente na rede. A primiera conta representa o proprietário do qual 0.04009944 ETH correspondentes ao custo foram subtraídos.
+
+</p>
+    </figcaption>
+  </figure>
+</div>
+
+A blockchain Ethereum serve como o backend descentralizado da dApp, garantindo a integridade e a imutabilidade das informações. Além disso, a blockchain utiliza o algoritmo de consenso Proof of Stake (PoS) para validar transações de maneira segura e eficiente, eliminando a necessidade de intermediários. É importante destacar que ao simular uma blockchain Ethereum local através do Ganache, o algoritmo de consenso é simplificado para facilitar o desenvolvimento e os testes.
+
+O esquema da Figura 7 apresenta a arquitetura descrita da aplicação. 
+
+<div align="center">
+  <figure>  
+    <img src="images\arquitetura dapp.jpg" width="500px">
+    <figcaption>
+      <p align="center"> 
+
+**Figura 7** - Arquitetura da aplicação descentralizada com blockchain Ethereum
 
 </p>
     </figcaption>
@@ -129,14 +184,40 @@ Faz uma aposta (transação blockchain).
 Resultado do evento é resolvido pelo contrato inteligente.
 Recompensas são distribuídas automaticamente.-->
 
-O fluxo de operação da dApp começa com a conexão do usuário, que acessa a aplicação por meio de um navegador compatível com MetaMask, como oGoogle Chrome ou Firefox. O acesso à sua carteira MetaMask é requisitado e essencial para a identificação do usuário para o sistema. Em seguida, a partir da interface da BetU, uma das funcionalidades, dentre elas cadastrar um evento, realizar uma aposta, consultar o histórico, realizar um saque ou depósito, pode ser selecionada. 
+O fluxo de operação da dApp começa com a conexão do usuário, que acessa a aplicação por meio de um navegador compatível com MetaMask, como oGoogle Chrome ou Firefox. O acesso à sua carteira MetaMask é requisitado e essencial para a identificação do usuário para o sistema. Em seguida, o jogador pode escolher qual ação deseja realizar: cadastrar um evento, realizar uma aposta, realizar um saque ou depósito. 
 
-Quando o usuário realiza uma ação, exemplo aposta em um evento, a interface do usuário cria uma transação para enviar à blockchain. Esta transação contendo o endereço do contrato inteligente a ser executado, o método e os parâmetros necessários, como valor apostado, odd, dados do evento, é enviada à MetaMask para ser assinada digitalmente pelo usuário, utilizando sua chave privada armazenada localmente na carteira. Após a assinatura, a transação é transmitida para os nós da rede Ethereum em um bloco a ser validado através de cálculos matemáticos. Quando validado, o bloco é adicionado à blockchain e o estado atualizado, no caso de apostas ou saques, o saldo do usuário é verificado para registrar a operação.
+Ao apostar em um evento, o usuário identifica o jogo desejado a partir do ID, o time em que deseja apostar e a quantia, criando assim uma transação na blockchain. Esta operação é autenticada pela assinatura digital MetaMask, por meio da chave privada armazenada localmente na carteira do usuário. Após a assinatura, a transação é transmitida para os nós da rede Ethereum em um bloco a ser validado através de cálculos matemáticos. Quando validado, o bloco é adicionado à blockchain e o estado atualizado. No caso de apostas ou saques, o saldo do usuário é verificado para registrar a operação. Em um jogo, por exemplo, de ter ou não ter greve em uma universidade federal, os usuários Maria e Flávio com contas de index 3 e 5, respectivamente, resolvem fazer uma aposta. Maria aposta 5 ETH de que vai ter greve e Flávio aposta 10 ETH de que não terá greve, como demonstram os debitos das contas de index 3 e 4 na Figura 8 das apostas realizadas. Ao final do semestre, não houve greve e Flávio ganha a aposta, tendo seu saldo incrementaod automaticamente como apresenta a Figura 9. 
 
 
-Ao optar pela criação de um evento, o usuário deve indicar o nome, data de término e o tipo do jogo, dentre dualidade, em que apenas uma das 2 opções será vencedora a exemplo do lançamento de uma moeda, ou a categoria múltiplas opções em que existe apenas uma opção vencedora dentre múltiplas possibilidades a exemplo do sorteio de um número. O tipo do jogo permite definir o cálculo fracionário da odd e da distribuição dos ganhos. Dessa maneira, ao atender às condições definidas, o evento é criado e estará disponível na blockchain para qualquer usuário realizar uma aposta. 
+No cenário da criação de um evento, o usuário deve indicar o nome, e o time A e B, em que apenas uma das 2 opções será vencedora a exemplo do lançamento de uma moeda. O tipo do jogo permite definir o cálculo fracionário da odd e da distribuição dos ganhos. Dessa maneira, ao atender às condições definidas, o evento é criado e estará disponível na blockchain para qualquer usuário realizar uma aposta. 
 
-Após a conclusão de um evento esportivo, o contrato inteligente é responsável pela distribuição automática dos prêmios aos vencedores, sem a necessidade de intervenção manual. Através da blockchain, o processo de distribuição de prêmios é realizado de forma rápida e transparente, com base nas odds e nos resultados previamente definidos. A utilização de contratos inteligentes assegura que todos os participantes que acertaram seus palpites sejam recompensados de forma justa e oportuna, minimizando erros e disputas sobre os resultados. Esse processo não só aumenta a eficiência das transações, mas também fortalece a confiança na plataforma, pois a distribuição de prêmios é executada de maneira completamente automatizada e imutável.
+Após a conclusão de um evento, o contrato inteligente é responsável pela distribuição automática dos prêmios aos vencedores, sem a necessidade de intervenção manual. Através da blockchain, o processo de distribuição de prêmios é realizado de forma rápida e transparente, com base nas odds e nos resultados previamente definidos. A utilização de contratos inteligentes assegura que todos os participantes que acertaram seus palpites sejam recompensados de forma justa e oportuna, minimizando erros e disputas sobre os resultados. Esse processo não só aumenta a eficiência das transações, mas também fortalece a confiança na plataforma, pois a distribuição de prêmios é executada de maneira completamente automatizada e imutável.
+
+<div align="center">
+  <figure>  
+    <img src="images/aposta_greve_realizada.png">
+    <figcaption>
+      <p align="center"> 
+
+**Figura 8** - Contas e seus saldos após a realização de uma aposta pelos usuários de index 3 e 4 em um evento ativo.
+
+</p>
+    </figcaption>
+  </figure>
+</div>
+
+<div align="center">
+  <figure>  
+    <img src="images/resultado_aposta_greve.png">
+    <figcaption>
+      <p align="center"> 
+
+**Figura 9** - Saldo das contas após o fim do evento "Greve:?" e distribuição dos prêmios.
+
+</p>
+    </figcaption>
+  </figure>
+</div>
 
 ## Resultados
 
@@ -147,13 +228,41 @@ Criação de eventos esportivos.
 Registro de apostas no contrato inteligente.
 Distribuição automática de prêmios.. -->
 
-- <b>Criação de Eventos Esportivos:</b> Ao acessar a plataforma, o usuário pode cadastrar novos eventos de apostas esportivas na página principal. Assim, escolhendo o nome do evento esportivo e suaa categoria para ser registrado. Quando seu evento é registrado com sucesso na blockchain, o usuário é notificado e estará disponível para outros usuários participarem.
+- <b>Criação de Eventos Esportivos:</b> Ao acessar a plataforma, o usuário pode cadastrar novos eventos de apostas esportivas na página principal. Assim, escolhendo o nome do evento, o time 1 e o time 2. Quando seu evento é registrado com sucesso na blockchain, a exemplo dos 3 jogos criados e listados no console da Figura 10, ele fica disponível para que outros usuários realizem apostas. 
 
-- <b>Registro de Apostas:</b> Quando o usuário deseja apostar, ele acessa os eventos disponíveis e seleciona em qual aposta deseja participar. A interface exibe as odds dinâmicas, que são ajustadas com base nas probabilidades do evento. Após a seleção do valor a ser apostado, o usuário confirma sua aposta, e ela é registrada automaticamente em um contrato inteligente. O valor da aposta e as odds selecionadas são salvos na blockchain, garantindo transparência e imutabilidade das transações. O usuário recebe uma confirmação instantânea sobre o registro de sua aposta.
+<div align="center">
+  <figure>  
+    <img src="images/jogos_criados_2.png" >
+    <figcaption>
+      <p align="center"> 
 
-- <b>Distribuição Automática de Prêmios:</b> Após o término de um evento esportivo, o sistema verifica automaticamente os resultados e executa o contrato inteligente para distribuir os prêmios. Em caso de vitória, o usuário receberá o valor apostado multiplicado pela odd registrada no momento da aposta. O processo de distribuição é rápido e ocorre sem a necessidade de intervenção manual, garantindo que os prêmios sejam entregues de maneira justa e transparente, diretamente para as carteiras dos vencedores. A operação de distribuição é visível na blockchain, assegurando que não haja manipulação nos resultados.
+**Figura 10** - Jogos criados com sucesso
 
-- Saque e Depósito: Na aplicação, o usuário pode realizar depósitos e saques diretamente usando sua carteira Metamask. Para o depósito, o usuário transfere criptomoeda (como Ether) para o endereço indicado, e o saldo é atualizado automaticamente após a confirmação na blockchain. Já no saque, o usuário escolhe o valor a ser retirado e a transação é enviada para seu endereço de carteira. Tanto depósitos quanto saques são validados por contratos inteligentes, garantindo segurança, transparência e atualização imediata do saldo na plataforma.
+</p>
+    </figcaption>
+  </figure>
+</div>
+
+- <b>Odd dinâmica:</b> A odd de cada time em um jogo é calculada dinamicamente em função do total de apostas dividido pelas apostas no respectivo time. Dessa maneira, a odd será maior em times com menos apostas, atraindo os apostadores pela possibilidade de maior ganho, e menor no time com mais valores em apostas. 
+
+- <b>Registro de Apostas:</b> Quando o usuário deseja apostar, ele acessa os jogos disponíveis e seleciona em qual aposta deseja participar, atravé do ID do jogo. Em seguida, o usuário determina o  valor a ser apostado respeitando o mínimo de 0.01 ETH, os blocos são minerados, as quantias debitadas das contas e a aposta registrada. O valor da aposta e as odds são salvas na blockchain, garantindo transparência e imutabilidade das transações. Para simplificar a solução, cada jogador pode realizar apenas 1 aposta por jogo.
+
+- <b>Distribuição Automática de Prêmios:</b> Após o término de um evento esportivo, o sistema verifica o time ganhador e executa o contrato inteligente para distribuir o prêmio entre os vencedores. Em caso de vitória, o usuário receberá um valor em função da odd no momento da aposta, do valor apostado e do total a ser distribuído. O processo de distribuição é rápido e ocorre sem a necessidade de intervenção manual, garantindo que os prêmios sejam entregues de maneira justa e transparente, diretamente para as carteiras dos vencedores. Por exemplo, em um jogo do brasileirão criado no sistema em que os times são Time 1: Vasco e Time 2: Qualquer Time, João (index 2), Maria (index 3) e Flávio (index 4) apostaram, respectivamente 2, 5 e 10 ETH do saldo de 100 ETH disponível, na vitória de "Qualquer Time". Já Carlos (index 1) foi o único apostador na vitória do Vasco com uma aposta de 1 ETH. Ao final do jgo, o Vasco é vitorioso e a distribuição dos prêmios é simulada na Figura 11. Todas as transações de apostas e pagamentos são registradas e visíveis a todos na blockchain, assegurando que não haja manipulação nos resultados.
+
+<div align="center">
+  <figure>  
+    <img src="images/vitoria vasco.png">
+    <figcaption>
+      <p align="center"> 
+
+**Figura 11** - Decréscimo no saldo dos apostadores e distribuição do prêmio na vitória do vasco no jogo criado
+
+</p>
+    </figcaption>
+  </figure>
+</div>
+
+- <b>Saque e Depósito:</b> Na aplicação, o usuário pode realizar depósitos e saques diretamente usando sua carteira Metamask. Para o depósito, o usuário transfere criptomoeda (como Ether) para o endereço indicado, e o saldo é atualizado automaticamente após a confirmação na blockchain. Já no saque, o usuário escolhe o valor a ser retirado e a transação é enviada para seu endereço de carteira.
 
 ## Conclusão
 <!--Resumo dos Resultados:
